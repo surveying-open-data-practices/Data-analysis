@@ -1,0 +1,76 @@
+ques_level1,IAD_category_1,IAD_category_1_code,IAD_category_2,IAD_category_2_code,IAD_category_3,IAD_category_3_code
+Q09,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q10,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q11,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q12,Action Arena,B,Action situations,a,Individual re-use,1
+Q12,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q12,Action Arena,B,Action situations_actors,b,Individual re-use,1
+Q13,Action Arena,B,Action situations,a,Individual re-use,1
+Q13,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q13,Action Arena,B,Action situations_actors,b,Individual re-use,1
+Q14,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q14,Action Arena,B,Action situations,a,Individual re-use,1
+Q14,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q14,Action Arena,B,Action situations_actors,b,Individual re-use,1
+Q15,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q16,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q17,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q18,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q19,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q20,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q21,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q22,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q23,Exogenous Variables,A,Context_Research community,b,Attributes of Community,1
+Q24,Exogenous Variables,A,Context_Research environment,a,Training,2
+Q25,Outcomes,C,,,,
+Q26,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q27,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q28,Exogenous Variables,A,Context_Research community,b,Attributes of Community,1
+Q29,Exogenous Variables,A,Context_Research environment,a,Training,2
+Q30,Exogenous Variables,A,Context_Research environment,a,Technical support,3
+Q30,Exogenous Variables,A,Context_Research community,b,Mentorship/Guidance,3
+Q30,Exogenous Variables,A,Context_Research community,b,Attributes of Community,1
+Q31,Exogenous Variables,A,Context_Research community,b,Attributes of Community,1
+Q32,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q32,Action Arena,B,Action situations,a,Individual re-use,1
+Q32,Action Arena,B,Action situations_actors,b,Individual sharing: Resources,6
+Q32,Action Arena,B,Action situations_actors,b,Individual re-use,1
+Q33,Exogenous Variables,A,Context_Research environment,a,Technical support,3
+Q33,Exogenous Variables,A,Context_Research community,b,Attributes of Community,1
+Q33,Action Arena,B,Action situations_actors,b,Individual sharing: Resources,6
+Q34,Exogenous Variables,A,Context_Research community,b,Rewards for sharing,2
+Q35,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q36,Exogenous Variables,A,Context_Research community,b,Rewards for sharing,2
+Q37,Exogenous Variables,A,Context_Research environment,a,Training,2
+Q37,Action Arena,B,Action situations_actors,b,Individual sharing practices: RDM plans,2
+Q38,Exogenous Variables,A,Context_Research environment,a,Training,2
+Q38,Action Arena,B,Action situations_actors,b,Individual sharing practices: RDM plans,2
+Q39,Exogenous Variables,A,Context_Research environment,a,Technical support,3
+Q39,Action Arena,B,Action situations_actors,b,Individual sharing practices: RDM plans,2
+Q40,Exogenous Variables,A,Context_Research environment,a,Technical support,3
+Q41,Action Arena,B,Action situations_actors,b,Individual sharing practices: DMP,3
+Q42,Action Arena,B,Action situations_actors,b,Individual sharing practices: DMP,3
+Q43,Action Arena,B,Action situations_actors,b,Individual sharing practices: DMP,3
+Q44,Action Arena,B,Action situations_actors,b,Individual sharing practices: DMP,3
+Q45,Action Arena,B,Action situations_actors,b,Individual sharing practices: DMP,3
+Q46,Exogenous Variables,A,Context_Research environment,a,Financial support ,4
+Q46,Action Arena,B,Action situations_actors,b,Individual sharing: Resources,6
+Q47,Exogenous Variables,A,Context_Research environment,a,Financial support ,4
+Q47,Action Arena,B,Action situations_actors,b,Individual sharing: Resources,6
+Q48,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q49,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q50,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q51,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q51,Action Arena,B,Action situations_actors,b,Individual sharing: licences,5
+Q52,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q52,Action Arena,B,Action situations_actors,b,Individual sharing: licences,5
+Q53,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q54,Exogenous Variables,A,Context_Research environment,a,Technical support,3
+Q54,Exogenous Variables,A,Context_Research environment,a,Physical research environment,1
+Q55,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q56,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q57,Exogenous Variables,A,Context_Research community,b,Attributes of Community,1
+Q58,Exogenous Variables,A,Context_Regulations,c,Rules in use,1
+Q59,Exogenous Variables,A,Context_Research community,b,Mentorship/Guidance,3
+Q60,Action Arena,B,Action situations_actors,b,Individual sharing: what data are shared,4
+Q61,Exogenous Variables,A,Context_Research environment,a,Technical support,3
