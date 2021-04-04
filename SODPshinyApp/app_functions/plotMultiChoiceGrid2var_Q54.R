@@ -6,7 +6,7 @@
 #questionName <- "When considering your research activities do you have:"
 #demographic <- "Age"
 
-plotMultiChoiceGrid2var_Q54 <- function(questionName, demographic) {
+plotMultiChoiceGrid2var_Q54 <- function(questionName, demographic,  data_key, data_all, lookupTable) {
 
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    

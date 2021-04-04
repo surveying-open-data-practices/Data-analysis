@@ -6,7 +6,7 @@
 #questionName <- "Who is typically given access to data produced by your research pre- and post-publication?"
 #demographic <- "Age"
 
-plotMultiChoiceGrid2var_Q18 <- function(questionName, demographic) {
+plotMultiChoiceGrid2var_Q18 <- function(questionName, demographic,  data_key, data_all, lookupTable) {
 
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    

@@ -6,7 +6,7 @@
 questionName <- "Where did you store the data you created while you were conducting your research and after research was completed (select all that apply)"
 demographic <- "Age"
 
-plotMultiChoiceGrid2var_Q11 <- function(questionName, demographic) {
+plotMultiChoiceGrid2var_Q11 <- function(questionName, demographic,  data_key, data_all, lookupTable) {
 
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    

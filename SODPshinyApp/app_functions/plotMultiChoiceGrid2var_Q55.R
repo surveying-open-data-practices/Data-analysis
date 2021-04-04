@@ -6,7 +6,7 @@
 #questionName <- "Do any other these issues impact on your ability to share your data effectively?"
 #demographic <- "Age"
 
-plotMultiChoiceGrid2var_Q55 <- function(questionName, demographic) {
+plotMultiChoiceGrid2var_Q55 <- function(questionName, demographic, data_key, data_all, lookupTable) {
 
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    

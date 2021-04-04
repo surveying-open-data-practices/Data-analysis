@@ -12,7 +12,7 @@ library(shiny)
 library(tidyverse)
 library(here)
 library(DT)
-library(ggpubr)
+# library(ggpubr)
 library(lemon) # for grid_arrange_shared_legend
 library(gridExtra)
 
@@ -20,10 +20,10 @@ library(gridExtra)
 options(shiny.usecairo=T)
 
 # ----- load data -----
-data_dir <- 'SODPshinyApp/data'
-data_all <- read_csv(here(data_dir, "results-for-idrc-surveyin-2021-03-05-0807_edit_allLanguages.csv"))
-data_key <- read_csv(here(data_dir, "results-for-idrc-surveyin-2020-11-06-1612-key.en_edit.csv"))
-IAD_framework_key <- read_csv(here(data_dir, "IADframeworkKey.csv"))
+#data_dir <- 'SODPshinyApp/data'
+data_all <- read_csv("data/results-for-idrc-surveyin-2021-03-05-0807_edit_allLanguages.csv")
+data_key <- read_csv("data/results-for-idrc-surveyin-2020-11-06-1612-key.en_edit.csv")
+IAD_framework_key <- read_csv("data/IADframeworkKey.csv")
 
 # ----- data omissions -----
 data_all <- data_all %>% drop_na(Q5) %>%
@@ -69,16 +69,16 @@ lookupTable <-  slice(lookupTable, -(1:8)) # exclude the demographics questions
 visualisationQuestions <- lookupTable$question
 
 # ----- load plot functions -----
-source(here('SODPshinyApp/app_functions/plotDemographics.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceSingleOption.R'))
-source(here('SODPshinyApp/app_functions/plotCheckbox2var.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q11.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q17.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q18.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q27.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q53.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q54.R'))
-source(here('SODPshinyApp/app_functions/plotMultiChoiceGrid2var_Q55.R'))
+source('app_functions/plotDemographics.R')
+source('app_functions/plotMultiChoiceSingleOption.R')
+source('app_functions/plotCheckbox2var.R')
+source('app_functions/plotMultiChoiceGrid2var_Q11.R')
+source('app_functions/plotMultiChoiceGrid2var_Q17.R')
+source('app_functions/plotMultiChoiceGrid2var_Q18.R')
+source('app_functions/plotMultiChoiceGrid2var_Q27.R')
+source('app_functions/plotMultiChoiceGrid2var_Q53.R')
+source('app_functions/plotMultiChoiceGrid2var_Q54.R')
+source('app_functions/plotMultiChoiceGrid2var_Q55.R')
 
 
 #### -----  Define UI for application that draws plot -----
@@ -218,7 +218,7 @@ server <- function(input, output) {
     # ----- output for second panel (Demographics) -----
     # plot with ggplot
     output$plotDemographics <- renderPlot({
-        plotDemographics(input$DemographicOption1, input$DemographicOption2)
+        plotDemographics(input$DemographicOption1, input$DemographicOption2,  data_key, data_all)
     })
 
     # # ----- Download button for download of graphs ----- THIS CODE WORKS, but we have removed the download button for now
@@ -247,24 +247,24 @@ server <- function(input, output) {
     output$plotVisual <- renderPlot({
         question_type <- as.character(lookupTable %>% filter(question == input$question) %>% select(ques_type))
         if (question_type == "multichoice_single answer") {
-            plotMultiChoiceSingleOption(input$question, input$DemographicOption3)
+            plotMultiChoiceSingleOption(input$question, input$DemographicOption3, data_key, data_all, lookupTable)
         } else if (question_type == "checkbox") {
-            plotCheckbox2var(input$question, input$DemographicOption3)
+            plotCheckbox2var(input$question, input$DemographicOption3,  data_key, data_all)
         } else if (question_type == "multiple choice grid") {
             if (input$question == "Where did you store the data you created while you were conducting your research and after research was completed (select all that apply)") {
-                plotMultiChoiceGrid2var_Q11(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q11(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else if (input$question == "At what point do you start sharing different types of data?") {
-                plotMultiChoiceGrid2var_Q17(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q17(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else if (input$question == "Who is typically given access to data produced by your research pre- and post-publication?") {
-                plotMultiChoiceGrid2var_Q18(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q18(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else if (input$question == "When you share your data, how much do you make open?") {
-                plotMultiChoiceGrid2var_Q27(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q27(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else if (input$question == "Who do you think owns the data you have produced in your last research project? Does this differ before publication and after publication?") {
-                plotMultiChoiceGrid2var_Q53(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q53(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else if (input$question == "When considering your research activities do you have:") {
-                plotMultiChoiceGrid2var_Q54(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q54(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else if (input$question == "Do any other these issues impact on your ability to share your data effectively?") {
-                plotMultiChoiceGrid2var_Q55(input$question, input$DemographicOption3)
+                plotMultiChoiceGrid2var_Q55(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else {
              print("no plot")  
             }

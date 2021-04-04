@@ -6,7 +6,7 @@
 #questionName <- "At what point do you start sharing different types of data?"
 #demographic <- "Age"
 
-plotMultiChoiceGrid2var_Q17 <- function(questionName, demographic) {
+plotMultiChoiceGrid2var_Q17 <- function(questionName, demographic,  data_key, data_all, lookupTable) {
 
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    

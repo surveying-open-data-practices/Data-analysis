@@ -4,7 +4,7 @@
 
 
 ### plotting function -------
-plotMultiChoiceSingleOption <- function(questionName, demographicTwo) {
+plotMultiChoiceSingleOption <- function(questionName, demographicTwo, data_key, data_all, lookupTable) {
    
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    
