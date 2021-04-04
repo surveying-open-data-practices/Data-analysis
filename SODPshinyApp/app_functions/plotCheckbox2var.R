@@ -3,7 +3,7 @@
 # in the ggplot section, there is a choice between plotting counts or percent stacked barplots (out of 100); the plot of relative frequencies is not yet possible
 
 
-plotCheckbox2var <- function(questionName, demographic) {
+plotCheckbox2var <- function(questionName, demographic,  data_key, data_all) {
    
    lookUpTableCheckbox <- data_key %>% select(ques_level1, ques_level2, ques_type, question) %>% 
       filter(ques_type == "checkbox")

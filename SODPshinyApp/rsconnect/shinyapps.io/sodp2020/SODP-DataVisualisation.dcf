@@ -1,0 +1,12 @@
+name: SODP-DataVisualisation
+title: SODP-DataVisualisation
+username:
+account: sodp2020
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3907914
+bundleId: 4430121
+url: https://sodp2020.shinyapps.io/SODP-DataVisualisation/
+when: 1617547607.12079
+asMultiple: FALSE
+asStatic: FALSE

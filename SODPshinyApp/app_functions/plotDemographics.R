@@ -4,7 +4,7 @@
 
 
 ### plotting function -------
-plotDemographics <- function(demographicOne, demographicTwo) {
+plotDemographics <- function(demographicOne, demographicTwo, data_key, data_all) {
    
    # Extract the Question answers and key from data_all and data_key and draw a plot
    

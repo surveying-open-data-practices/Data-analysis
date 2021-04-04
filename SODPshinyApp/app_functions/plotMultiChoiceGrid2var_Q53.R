@@ -6,7 +6,7 @@
 #questionName <- "Who do you think owns the data you have produced in your last research project? Does this differ before publication and after publication?"
 #demographic <- "Age"
 
-plotMultiChoiceGrid2var_Q53 <- function(questionName, demographic) {
+plotMultiChoiceGrid2var_Q53 <- function(questionName, demographic,  data_key, data_all, lookupTable) {
 
    questionName <- as.character(lookupTable %>% filter(question == questionName) %>% select(ques_level1))
    
