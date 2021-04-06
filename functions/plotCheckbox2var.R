@@ -1,15 +1,12 @@
 
 # this function is for the checkbox questions where more than one option can be selected. It plots two variables (e.g. combined with a demographic)
-# in the ggplot section, there is a choice between plotting counts or percent stacked barplots; I cannot get the plot of relative frequencies to work yet
+# in the ggplot section, there is a choice between plotting counts or percent stacked barplots; the plot of relative frequencies does not work yet
 # the cleaned data files and key files are read in using the script readFilesCleanData.R
 
 
 ### load packages -------
 
 library(tidyverse)
-
-# NOTE: This function plots either the counts, or a percent stacked barplot (out of 100), but I cannot get the plot of frequencies to work yet
-
 
 plotCheckbox2var <- function(question_name, demographic) {
    
@@ -73,4 +70,3 @@ plotCheckbox2var <- function(question_name, demographic) {
 #plotCheckbox2var("Q60", "Q1")
 
 
-# NOTE: This function plots either the counts, or a percent stacked barplot (out of 100), but I cannot get the plot of frequencies to work yet

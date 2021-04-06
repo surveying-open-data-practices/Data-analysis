@@ -1,6 +1,6 @@
 # About
 
-This repository contain data and scripts for cleaning and visualisation for the Surveying Open Data Practices 2020 project. More information is available at the website: https://surveying-open-data-practices.github.io/sopd2020/en/
+This repository contains data and scripts for cleaning and visualisation for the Surveying Open Data Practices 2020 project. More information is available at the website: https://surveying-open-data-practices.github.io/sopd2020/en/
 
 
 # Data 
@@ -9,12 +9,12 @@ The survey was set up in JISC's Online Survey Tool (https://www.onlinesurveys.ac
 
 The survey was offered in three languages: English, French and Portuguese. Data was downloaded from the JISC Online survey tool in CSV format. The key files were used to merge responses from the three different surveys.
 
-Due to differences between the three surveys several iterations of manual cleaning were run to allow the merging of the data across languages.
+Due to differences between the three surveys, several iterations of manual cleaning were run to allow the merging of the data across languages. See [data/README.md](data/README.md) for information on the data files and the data cleaning conducted.
 
-A total of XXX responses were obtained:
-- English: XXX
-- French: XXX
-- Portuguese: XXX
+After cleaning, a total of 64 responses were obtained:
+- English: 58
+- French: 4
+- Portuguese: 2
 
 The following question types exist in the survey:
 - multiple choice (radio buttons - a single response is allowed)
@@ -23,7 +23,7 @@ The following question types exist in the survey:
 
 # Scripts
 
-Due to the specific format of the data and manual data manipulation that needed to take place to correct small errors in the data, these scripts and functions are probably not directly transferrable to future versions of this survey. We hope however that the scripts will provide help for others wanting to do similar analysis and visualisations.
+Due to the specific format of the data and manual data manipulation that needed to take place to correct small errors in the data, these scripts and functions are probably not directly transferrable to future versions of this survey. However, we hope that the scripts will provide help for others wanting to do similar analyses and visualisations.
 
 The [scripts/readFilesCleanData.R](scripts/readFilesCleanData.R) file contain R instructions for cleaning the data and manipulating the data format to facilitate plotting.
 

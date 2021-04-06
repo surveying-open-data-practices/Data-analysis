@@ -3,8 +3,8 @@
 # this function is for plotting the multiple choice grid (table) question Q11 combined with a demographic.
 # it plots counts for more than one condition of the data (e.g. options selected by respondents for 'during research' and options selected for 'after research'). The plots are arranged to show in one plotting window
 
-questionName <- "Where did you store the data you created while you were conducting your research and after research was completed (select all that apply)"
-demographic <- "Age"
+#questionName <- "Where did you store the data you created while you were conducting your research and after research was completed (select all that apply)"
+#demographic <- "Age"
 
 plotMultiChoiceGrid2var_Q11 <- function(questionName, demographic,  data_key, data_all, lookupTable) {
 
