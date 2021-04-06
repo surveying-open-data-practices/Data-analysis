@@ -7,12 +7,12 @@ Plots may be used in blog posts, papers, and other media. All plots are under CC
 
 # Data 
 
-The [data/](data/) directory includes the raw data and key files downloaded from the JISC Online survey tool on the 06 November 2020 and on the 05 March 2021. The files downloaded on the 05 March 2021 contained more survey responses and were therefore the ones used. 
+This data directory includes the raw data and key files downloaded from the JISC Online survey tool on the 06 November 2020 and on the 05 March 2021. The files downloaded on the 05 March 2021 contained more survey responses and were therefore the ones used. 
 
-Within the [data/](data/) directory, there is a directory called [data/edit/](data/edit/). This contains the cleaned and edited data files for:
-- The survey responses for all languages combined ([data/edit/results-for-idrc-surveyin-2021-03-05-0807_edit_allLanguages.csv](data/edit/results-for-idrc-surveyin-2021-03-05-0807_edit_allLanguages.csv))
-- The key file (in English) ([data/edit/results-for-idrc-surveyin-2020-11-06-1612-key.en_edit.csv](data/edit/results-for-idrc-surveyin-2020-11-06-1612-key.en_edit.csv))
-- An IAD Framework Key file showing the IAD categories of the survey questions ([data/edit/IADframeworkKey.csv]([data/edit/IADframeworkKey.csv))
+Within the data directory, there is a directory called [edit/](edit/), which contains the cleaned and edited data files for:
+- The survey responses for all languages combined ([edit/results-for-idrc-surveyin-2021-03-05-0807_edit_allLanguages.csv](edit/results-for-idrc-surveyin-2021-03-05-0807_edit_allLanguages.csv))
+- The key file (in English) ([edit/results-for-idrc-surveyin-2020-11-06-1612-key.en_edit.csv](edit/results-for-idrc-surveyin-2020-11-06-1612-key.en_edit.csv))
+- An IAD Framework Key file showing the IAD categories of the survey questions ([edit/IADframeworkKey.csv]([edit/IADframeworkKey.csv))
 
 
 # Data cleaning
