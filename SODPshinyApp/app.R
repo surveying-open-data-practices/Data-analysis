@@ -33,10 +33,10 @@ data_all <- data_all %>% drop_na(Q5) %>%
 
 # ----- data omissions -----: exclude code columns from the IAD framework key
 IAD_framework_key <- IAD_framework_key %>% select("Question_no", "Question", "IAD_category_1", "IAD_category_2", "IAD_category_3")
-    
+
 # ----- rename question numbers for demographic options -----
 # data_all (answers): rename demographic questions (Q1-Q8) to text for shiny choice options
-data_all <- rename(data_all, Age = Q1, 
+data_all <- rename(data_all, Age = Q1,
                    Gender = Q2,
                    Highest_degree = Q3,
                    Discipline_highest_degree = Q4,
@@ -93,9 +93,9 @@ ui <- fluidPage(
                 sidebarPanel(
                     p("Project completed March 2021."),
                     p("The SODP project was funded by the IDRC and hosted by InSIS, Oxford University. For more details please see the ", a("SODP website.", href="https://surveying-open-data-practices.github.io/sopd2020/en/")),
-                    p("Open source R code. TO INSERT LINK"),
-                    p("See the ", a(href="https://surveying-open-data-practices.github.io/sopd2020/en/blog/", "SODP blog page"), "for more information about the data analysis.")
-                    
+                    p("Open source ", a("R code. ", href="https://github.com/surveying-open-data-practices/Data-analysis")),
+                    p("See the ", a("SODP GitHub page ", href="https://github.com/surveying-open-data-practices/Data-analysis"), "and the ", a("SODP blog page ", href="https://surveying-open-data-practices.github.io/sopd2020/en/blog/survey-results-published/"), "for more information about the data analysis.")
+
                     ), # end sidebarPanel
                 mainPanel(
                     h4('Distribution of surveys completed in English, French and Portuguese'),
@@ -174,23 +174,23 @@ ui <- fluidPage(
                  )
     ) # end tabsetPanel
 ) # end fluidpage
-    
-    
+
+
 #### -----  Define server logic required to draw a plot -----
 server <- function(input, output) {
-    
+
     # ----- output for first panel (Language distribution) -----
     # data selection
     lang_dist <- select(data_all, "language")
-    
+
     # plot with ggplot
     output$LangPlot <- renderPlot({
         ggplot(data = lang_dist, aes(x = language)) +
             geom_bar(stat="count", width=0.7, fill="steelblue") +
             theme(text = element_text(size = 14)) +
             labs(x = " ")
-    }) 
-    
+    })
+
     # # ----- Download button for download of graphs ----- THIS CODE WORKS, but we have removed the download button for now
     # LangPlot <- reactive({
     #     ggplot(data = lang_dist, aes(x = language)) +
@@ -214,7 +214,7 @@ server <- function(input, output) {
     #     },
     #     contentType = 'image/png'
     # )
-           
+
     # ----- output for second panel (Demographics) -----
     # plot with ggplot
     output$plotDemographics <- renderPlot({
@@ -241,7 +241,7 @@ server <- function(input, output) {
     #     },
     #     contentType = 'image/png'
     # )
-        
+
     # ----- output for third panel (Visualisations plots) -----
     # plot with ggplot
     output$plotVisual <- renderPlot({
@@ -266,7 +266,7 @@ server <- function(input, output) {
             } else if (input$question == "Do any other these issues impact on your ability to share your data effectively?") {
                 plotMultiChoiceGrid2var_Q55(input$question, input$DemographicOption3,  data_key, data_all, lookupTable)
             } else {
-             print("no plot")  
+             print("no plot")
             }
         } # end if statement
     })
@@ -274,7 +274,7 @@ server <- function(input, output) {
 # ----- Download button for download of graphs ----- TNB: THIS CODE IS NOT WORKING
 #     output$downloadVisPlots <- function(){
 #     question_type <- as.character(lookupTable %>% filter(question == input$question) %>% select(ques_type))
-#     
+#
 #     if (question_type == "multichoice_single answer") {
 #         # make the plot
 #         visPlot <- reactive({
@@ -296,8 +296,8 @@ server <- function(input, output) {
 #                 dev.off()
 #             },
 #             contentType = 'image/png'
-#         ) 
-#     } 
+#         )
+#     }
 #     else if (question_type == "checkbox") {
 #             # make the plot
 #             visPlot <- reactive({
@@ -321,15 +321,15 @@ server <- function(input, output) {
 #                 contentType = 'image/png'
 #             )
 #     }
-#     
+#
 # } # end function output$downloadVisPlots
-        
+
     # ----- output (table) for fourth panel (IAD framework table) -----
-#    output$table <- renderTable(IAD_framework_key)        
+#    output$table <- renderTable(IAD_framework_key)
     output$mytable = DT::renderDataTable({
             IAD_framework_key
         })
 } # end server
 
-# Run the application 
+# Run the application
 shinyApp(ui = ui, server = server)
